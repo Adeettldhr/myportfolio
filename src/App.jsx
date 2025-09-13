@@ -1,11 +1,11 @@
 // import components
 import Hero from "./components/Hero";
 import Navbar from "./Layouts/Navbar";
-import Skills from "./components/Skills";
 import Service from "./components/Services";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
-import Hireme from "./components/Hireme";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Contact from "./components/Contact";
 import { useEffect } from "react";
 // Animation package
@@ -24,16 +24,17 @@ const App = () => {
     <div className="">
       <Navbar />
       <Hero />
-      <Skills />
+
       <Service />
       <Projects />
       <Testimonials />
-      <Hireme />
+     
       <Contact />
       <footer className="p-3 text-center">
         <h6 className="mb-3">Adeet Tuladhar</h6>
         <p>© All CopyRights Reserved {new Date().getFullYear()}</p>
       </footer>
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
     </div>
   );
 };

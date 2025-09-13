@@ -9,10 +9,10 @@ import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/logo2.png";
 import services_logo3 from "./assets/images/Services/logo3.png";
 
-import suyatra from "./assets/images/Projects/suyatra.png";
-import paisalabs from "./assets/images/Projects/paisalabs.png";
-import matrixmutual from "./assets/images/Projects/image.png";
-import person_project1 from "./assets/images/Projects/person.png";
+import uxqode from "./assets/images/Logo/uxqode.jpeg";
+import ingg from "./assets/images/Logo/ingg.jpeg";
+import nextnepal from "./assets/images/Logo/nextnepal.jpeg";
+import amnil from "./assets/images/Logo/amnil.jpeg";
 
 import avatar1 from "./assets/images/Testimonials/avatar1.png";
 import avatar2 from "./assets/images/Testimonials/avatar2.png";
@@ -55,7 +55,7 @@ export const content = {
     },
   ],
   hero: {
-    title: "Front end Web Developer",
+    title: "Web and Mobile Developer",
     firstName: "ADEET",
     LastName: "TULADHAR",
     btnText: "Hire Me",
@@ -119,25 +119,7 @@ export const content = {
       },
     ],
   },
-  Projects: {
-    title: "Projects",
-    subtitle: "MY CREATION",
-    image: person_project1,
-    project_content: [
-      {
-        title: "Suyatra",
-        image: suyatra,
-      },
-      {
-        title: "Paisalabs",
-        image: paisalabs,
-      },
-      {
-        title: "Matrix Mutual",
-        image: matrixmutual,
-      },
-    ],
-  },
+
   Testimonials: {
     title: "Testimonials",
     subtitle: "MY CLIENT REVIEWS",
@@ -205,4 +187,34 @@ export const content = {
   Footer: {
     text: "All © Copy Right Reserved 2024",
   },
+  ExperienceData : [
+    {
+      year: "2024 - 2025",
+      project: "Ux-Qode Pvt. Ltd",
+      jobTitle: "Web and Mobile Developer",
+      description: "Designed and developed responsive web and mobile applications, integrated secure payment gateways, optimized performance, and ensured cross-platform compatibility.",
+      image: uxqode,
+    },
+    {
+      year: "2023 - 2024",
+      project: "Innovate Nepal Group",
+      jobTitle: "Software Engineer",
+      description: "Engineered scalable software solutions, built dynamic React-based applications with Tailwind CSS, collaborated in full-stack development, and optimized user experience.",
+      image: ingg,
+    },
+    {
+      year: "2022 - 2023",
+      project: "NEXT NEPAL Pvt. Ltd.",
+      jobTitle: "Frontend Developer",
+      description: "Developed interactive content modules, built responsive admin dashboards, maintained code quality, and collaborated with designers to enhance UI/UX during internship.",
+      image: nextnepal,
+    },
+    {
+      year: "2021 - 2022",
+      project: "Amnil Technologies Pvt. Ltd.",
+      jobTitle: "Frontend Developer Intern",
+      description: "Implemented real-time messaging features using WebSocket, assisted in frontend development tasks, tested UI components, and gained practical experience in modern frameworks.",
+      image: amnil,
+    },
+  ]
 };

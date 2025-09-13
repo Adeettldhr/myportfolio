@@ -1,5 +1,6 @@
 // import content
 import { content } from "../Content";
+import resume from "../assets/docs/Adeet-Resume.pdf";
 const Hero = () => {
   const { hero } = content;
 
@@ -18,11 +19,14 @@ const Hero = () => {
         </div>
 
         {/* first col */}
-        <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+        
+        <div className="pb-16 px-6 pt-5 mb-1" data-aos="fade-down" >
           <h2>{hero.title}</h2>
           <br />
           <div className="flex justify-end">
+          <a href={resume}  target="_blank" rel="noopener noreferrer">
             <button className="btn">{hero.btnText}</button>
+            </a>
           </div>
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
