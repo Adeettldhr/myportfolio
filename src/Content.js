@@ -13,6 +13,7 @@ import uxqode from "./assets/images/Logo/uxqode.jpeg";
 import ingg from "./assets/images/Logo/ingg.jpeg";
 import nextnepal from "./assets/images/Logo/nextnepal.jpeg";
 import amnil from "./assets/images/Logo/amnil.jpeg";
+import sandmanmedia from "./assets/images/Logo/sandmanmedia.webp";
 
 
 import Hireme_person from "./assets/images/Hireme/person.png";
@@ -155,6 +156,13 @@ export const content = {
     text: "All © Copy Right Reserved 2024",
   },
   ExperienceData : [
+    {
+      year: "Jan 2026 – Apr 2026",
+      project: "Sandman Media Inc.",
+      jobTitle: "Web Developer",
+      description: "Developed a PHP extension/plugin rendering live stock charts for public companies. Built and deployed a complete responsive website, optimized for performance across devices.",
+      image: sandmanmedia,
+    },
     {
       year: "2024 - 2025",
       project: "Ux-Qode Pvt. Ltd",
