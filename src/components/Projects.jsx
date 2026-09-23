@@ -20,24 +20,24 @@ const Projects = () => {
         </h4>
 
       <div className="relative max-w-6xl mx-auto px-4">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-1 bg-green-500"></div>
+        {/* Vertical line — left rail on mobile, centered on md+ */}
+        <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 top-0 h-full w-1 bg-green-500"></div>
 
         <div className="space-y-16">
           {experienceData.map((exp, index) => {
             const isLeft = index % 2 === 0;
             return (
-              <div key={index} className="relative flex flex-col md:flex-row items-center justify-between">
+              <div key={index} className="relative flex flex-col md:flex-row md:items-center md:justify-between pl-12 md:pl-0">
                 {/* Left Content */}
                 {isLeft && (
-                  <div className="w-full md:w-5/12 text-right md:pr-8">
+                  <div className="w-full md:w-5/12 md:text-right md:pr-8">
   <div className="flex justify-center items-center">
     {/* Image - 25% width */}
     <div className="w-1/4 flex justify-center">
       <img
         src={exp.image}
         alt={exp.project}
-        className="w-full h-full"
+        className="w-full h-auto object-contain"
       />
     </div>
 
@@ -46,41 +46,41 @@ const Projects = () => {
       <p className="text-green-600 font-bold text-sm">{exp.year}</p>
       <h3 className="text-xl font-semibold text-teal-700 italic">{exp.project}</h3>
       <p className="italic text-sm text-teal-600">{exp.jobTitle}</p>
-      
+
     </div>
   </div>
   <p className="mt-2 text-gray-600 text-left">{exp.description}</p>
 </div>
 
-                  
+
                 )}
 
-                {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-md z-10"></div>
+                {/* Timeline Dot — on the left rail on mobile, centered on md+ */}
+                <div className="absolute left-[18px] -translate-x-1/2 md:left-1/2 top-2 md:top-1/2 md:-translate-y-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-md z-10"></div>
 
                 {/* Right Content */}
                 {!isLeft && (
-                 <div className="w-full md:w-5/12 text-left md:pl-8 md:ml-auto">
+                 <div className="w-full md:w-5/12 md:text-left md:pl-8 md:ml-auto">
                  <div className="flex justify-center items-center">
                    {/* Image - 25% width */}
                    <div className="w-1/4 flex justify-center">
                      <img
                        src={exp.image}
                        alt={exp.project}
-                       className="w-full h-full"
+                       className="w-full h-auto object-contain"
                      />
                    </div>
-               
+
                    {/* Text info - 75% width */}
                    <div className="w-3/4 ml-4">
                      <p className="text-green-600 font-bold text-sm">{exp.year}</p>
                      <h3 className="text-xl font-semibold text-teal-700 italic">{exp.project}</h3>
-                     <p className="italic text-sm text-teal-600">{exp.jobTitle}</p>      
+                     <p className="italic text-sm text-teal-600">{exp.jobTitle}</p>
                    </div>
                  </div>
                  <p className="mt-2 text-gray-600 text-left">{exp.description}</p>
                </div>
-               
+
                 )}
               </div>
             );

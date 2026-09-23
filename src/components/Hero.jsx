@@ -37,7 +37,7 @@ const Hero = () => {
                 key={i}
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
-                className={`flex items-center w-80 gap-5
+                className={`flex items-center w-full max-w-80 gap-5
             ${i === 1 && " flex-row-reverse text-right"}  `}
               >
                 <h3>{content.count}</h3>

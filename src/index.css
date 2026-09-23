@@ -27,10 +27,10 @@
     @apply font-Poppins lg:text-6xl text-3xl font-extrabold;
   }
   h2 {
-    @apply font-Inria text-5xl font-bold;
+    @apply font-Inria text-4xl md:text-5xl font-bold;
   }
   h3 {
-    @apply font-Paprika text-5xl;
+    @apply font-Paprika text-4xl md:text-5xl;
   }
   h4 {
     @apply md:text-4xl text-3xl !leading-relaxed font-Paprika;
