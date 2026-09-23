@@ -4,8 +4,8 @@ import {
   FaGithub,
   FaInstagram,
   FaFacebook,
-  FaXTwitter,
-} from "react-icons/fa6";
+  FaTwitter,
+} from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -34,29 +34,19 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    try {
-      const res = await fetch("http://localhost:5007/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        toast.success("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        const error = await res.text();
-        toast.error(`Server error: ${error}`);
-      }
-    } catch (error) {
-      toast.error("Network error. Could not send message.");
-    }
+    // No backend on the static site — open the visitor's email client
+    // with everything pre-filled so the message actually reaches Adeet.
+    const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `${formData.message}\n\n— ${formData.name} (${formData.email})`
+    );
+    window.location.href = `mailto:adeettuldhr5@gmail.com?subject=${subject}&body=${body}`;
+    toast.success("Opening your email client — hit send to reach me!");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -83,7 +73,7 @@ const Contact = () => {
             <a href="https://github.com/Adeettldhr" target="_blank"><FaGithub className="hover:opacity-75" /></a>
             <a href="https://instagram.com/adeet_tldhr_/" target="_blank"><FaInstagram className="hover:opacity-75" /></a>
             <a href="https://facebook.com/adeet.tuladhar" target="_blank"><FaFacebook className="hover:opacity-75" /></a>
-            <a href="https://x.com/adeettldhr" target="_blank"><FaXTwitter className="hover:opacity-75" /></a>
+            <a href="https://x.com/adeettldhr" target="_blank"><FaTwitter className="hover:opacity-75" /></a>
           </div>
         </div>
 

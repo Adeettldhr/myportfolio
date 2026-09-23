@@ -22,6 +22,9 @@ const Hero = () => {
         
         <div className="pb-16 px-6 pt-5 mb-1" data-aos="fade-down" >
           <h2>{hero.title}</h2>
+          <p className="text-sm text-teal-700 font-medium mt-1">
+            Currently pursuing ServiceNow CSA certification
+          </p>
           <br />
           <div className="flex justify-end">
           <a href={resume}  target="_blank" rel="noopener noreferrer">
